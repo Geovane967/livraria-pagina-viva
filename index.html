@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria Pagina Viva - Cadastro</title>
+   
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Livraria Pagina Viva</h1>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Catálogo</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <article class="cartao-livro" id="meu-cartao-livro">
+            <h2 class="titulo-livro">O Alquimista</h2>
+            <img src="imagens/livro.png" alt="O alquimista" class="capa-midia">
+            <p class="autor-livro"><strong>Autor:</strong> Paulo Coelho</p>
+            <p class="preco-livro"><strong>Preço:</strong> R$ 49,90</p>
+            <p>Uma história inspiradora sobre seguir seus sonhos e ouvir o seu coração.</p>
+            <p>O romance narra a jornada de um jovem pastor andaluz chamado Santiago em busca de um tesouro escondido no Egito.</p>
+            <p>Uma das obras mais lidas do mundo, combinando filosofia, misticismo e sabedoria prática.</p>
+           
+            <button id="btn-adicionar">Adicionar ao carrinho</button>
+        
+            <ul id="carrinho"></ul>
+        </article> <!-- Correção: </article> fechado no local correto -->
+
+        <section class="secao-destaques">
+            <h3>Destaques do Livro</h3>
+            <ul>
+                <li>Capa dura</li>
+                <li>Frete grátis</li>
+                <li>Entrega em 24h</li>
+            </ul>
+        </section>
+
+        <section class="secao-formatos">
+            <h3>Formatos Disponíveis</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Formato</th>
+                        <th>Preço</th>
+                        <th>Prazo de Entrega</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fisico</td>
+                        <td>R$ 49,90</td>
+                        <td>3 dias uteis</td>
+                    </tr>
+                    <tr>
+                        <td>E-book</td>
+                        <td>R$ 29,90</td>
+                        <td>Imediato</td>
+                    </tr>
+                    <tr>
+                        <td>Audiobook</td>
+                        <td>R$ 34,90</td>
+                        <td>Imediato</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    
+
+        <!-- Bloco de contato com formulário integrado -->
+        <section id="contato">
+            <h2>Contato</h2>
+            
+            <form action="#" method="POST">
+                <div>
+                    <label for="nome-usuario">Nome:</label>
+                    <input type="text" id="nome-usuario" name="nome" required>
+                </div>
+
+                <div>
+                    <label for="email-usuario">E-mail:</label>
+                    <input type="email" id="email-usuario" name="email" required>
+                </div>
+
+                <div>
+                    <label for="senha-usuario">Senha de Acesso:</label>
+                    <input type="password" id="senha-usuario" name="senha" required>
+                </div>
+
+                <div>
+                    <p>Preferência de contato:</p>
+                    <input type="radio" id="pref-email" name="preferencia-contato" value="email" checked>
+                    <label for="pref-email">E-mail</label>
+
+                    <input type="radio" id="pref-telefone" name="preferencia-contato" value="telefone">
+                    <label for="pref-telefone">Telefone</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="novidades" name="receber-novidades" value="sim">
+                    <label for="novidades">Desejo receber novidades e promoções por e-mail</label>
+                </div>
+
+                <div>
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+         </section>
+    </main>
+
+    <footer>
+        <p>&copy; Livraria Página Viva - Contato: contato@livrariapaginaviva.com</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+<!-- 
+JUSTIFICATIVA SEMÂNTICA:
+- <header>: Usei para agrupar o título da livraria e a navegação principal.
+- <nav>: Escolhido para identificar o bloco de links de navegação do site.
+- <main>: Define o conteúdo central e exclusivo desta página.
+- <article>: Usei para o livro pois ele é um conteúdo independente que faz sentido por si só.
+- <footer>: Identifica o rodapé com informações de contato e direitos.
+-->
